@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos Pessoais\\PaymentContext\\PaymentContext.Shared\\PaymentContext.Shared.csproj": {}
+    "D:\\Projetos Pessoais\\PaymentContext\\modelando-dominios-ricos\\PaymentContext.Shared\\PaymentContext.Shared.csproj": {}
   },
   "projects": {
-    "D:\\Projetos Pessoais\\PaymentContext\\PaymentContext.Shared\\PaymentContext.Shared.csproj": {
+    "D:\\Projetos Pessoais\\PaymentContext\\modelando-dominios-ricos\\PaymentContext.Shared\\PaymentContext.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos Pessoais\\PaymentContext\\PaymentContext.Shared\\PaymentContext.Shared.csproj",
+        "projectUniqueName": "D:\\Projetos Pessoais\\PaymentContext\\modelando-dominios-ricos\\PaymentContext.Shared\\PaymentContext.Shared.csproj",
         "projectName": "PaymentContext.Shared",
-        "projectPath": "D:\\Projetos Pessoais\\PaymentContext\\PaymentContext.Shared\\PaymentContext.Shared.csproj",
+        "projectPath": "D:\\Projetos Pessoais\\PaymentContext\\modelando-dominios-ricos\\PaymentContext.Shared\\PaymentContext.Shared.csproj",
         "packagesPath": "C:\\Users\\joaoc\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos Pessoais\\PaymentContext\\PaymentContext.Shared\\obj\\",
+        "outputPath": "D:\\Projetos Pessoais\\PaymentContext\\modelando-dominios-ricos\\PaymentContext.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\joaoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "flunt": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

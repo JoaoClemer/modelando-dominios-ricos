@@ -1,3 +1,4 @@
+using Flunt.Validations;
 using PaymentContext.Shared.ValueObjects;
 
 namespace PaymentContext.Domain.ValueObjects
@@ -13,6 +14,12 @@ namespace PaymentContext.Domain.ValueObjects
             State = state;
             Country = country;
             ZipCode = zipCode;
+
+            AddNotifications(
+                new Contract()
+                .Requires()
+                .HasMinLen(Street,3,"Address.Street","This street is invalid")
+            );
         }
 
         public string Street { get; private set; }
