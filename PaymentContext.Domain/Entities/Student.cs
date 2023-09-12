@@ -1,3 +1,4 @@
+using Flunt.Validations;
 using PaymentContext.Domain.ValueObjects;
 using PaymentContext.Shared.Entities;
 
@@ -32,7 +33,12 @@ namespace PaymentContext.Domain.Entities
                     hasSubscriptionActive = true;
             }
 
-            AddNotification("Student.Subscriptions","You already have a subscription.");
+           AddNotifications(
+            new Contract()
+            .Requires()
+            .IsFalse(hasSubscriptionActive, "Student.Subscriptions", "You already have an active subscription.")
+            .AreEquals(0, subscription.Payments.Count, "Student.Subscription.Payments","This subscription does not have a payment.")
+            );
         }
     }
 
